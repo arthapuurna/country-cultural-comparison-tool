@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pl">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Country comparison</title>
@@ -63,7 +63,7 @@ const DATA = {
   "Canada": { Power_distance: 39, Individualism: 72, Masculinity: 52, Uncertainty_avoidance: 48, Pragmatism: 54, Indulgence: 68 },
   "Cape Verde": { Power_distance: 75, Individualism: 20, Masculinity: 15, Uncertainty_avoidance: 40, Pragmatism: 12, Indulgence: 83},
   "Chile": { Power_distance: 49, Individualism: 23, Masculinity: 28, Uncertainty_avoidance: 86, Pragmatism: 31, Indulgence: 68 },
-  "China": { Power_distance: 80, Individualism: 20, Masculinity: 50, Uncertainty_avoidance: 69, Pragmatism: 87, Indulgence: 24 },
+  "China": { Power_distance: 80, Individualism: 20, Masculinity: 50, Uncertainty_avoidance: 69, Pragmatism: 77, Indulgence: 24 },
   "Colombia": { Power_distance: 67, Individualism: 13, Masculinity: 64, Uncertainty_avoidance: 80, Pragmatism: 13, Indulgence: 83 },
   "Croatia": { Power_distance: 73, Individualism: 33, Masculinity: 40, Uncertainty_avoidance: 80, Pragmatism: 58, Indulgence: 33 },
   "Czech Republic": { Power_distance: 57, Individualism: 58, Masculinity: 57, Uncertainty_avoidance: 74, Pragmatism: 70, Indulgence: 29 },
@@ -105,7 +105,7 @@ const DATA = {
   "Mozambique": { Power_distance: 85, Individualism: 15, Masculinity: 38, Uncertainty_avoidance: 44, Pragmatism: 11, Indulgence: 80 },
   "Netherlands": { Power_distance: 38, Individualism: 100, Masculinity: 14, Uncertainty_avoidance: 53, Pragmatism: 67, Indulgence: 68 },
   "Nigeria": { Power_distance: 80, Individualism: 30, Masculinity: 60, Uncertainty_avoidance: 55, Pragmatism: 13, Indulgence: 84 },
-  "North Macedonia": { Power_distance: 90, Individualism: 22, Masculinity: 45, Uncertainty_avoidance: 87, Pragmatism: 52, Indulgence: 35 },
+  "North Macedonia": { Power_distance: 90 Individualism: 22, Masculinity: 45, Uncertainty_avoidance: 87, Pragmatism: 52, Indulgence: 35 },
   "Norway": { Power_distance: 31, Individualism: 81, Masculinity: 8, Uncertainty_avoidance: 50, Pragmatism: 80, Indulgence: 55 },
   "New Zealand": { Power_distance: 22, Individualism: 69, Masculinity: 58, Uncertainty_avoidance: 49, Pragmatism: 55, Indulgence: 75 },
   "Pakistan": { Power_distance: 55, Individualism: 14, Masculinity: 50, Uncertainty_avoidance: 59, Pragmatism: 19, Indulgence: 0.5 },
@@ -121,7 +121,7 @@ const DATA = {
   "Serbia": { Power_distance: 86, Individualism: 25, Masculinity: 43, Uncertainty_avoidance: 92, Pragmatism: 52, Indulgence: 28 },
   "Singapore": { Power_distance: 74, Individualism: 20, Masculinity: 48, Uncertainty_avoidance: 8, Pragmatism: 67, Indulgence: 46 },
   "Slovakia": { Power_distance: 71, Individualism: 52, Masculinity: 57, Uncertainty_avoidance: 77, Pragmatism: 51, Indulgence: 28 },
-  "Slovenia": { Power_distance: 71, Individualism: 27, Masculinity: 19, Uncertainty_avoidance: 88, Pragmatism: 49, Indulgence: 48 },
+  "Slovenia": { Power_distance: 71, Individualism: 58, Masculinity: 19, Uncertainty_avoidance: 88, Pragmatism: 49, Indulgence: 48 },
   "South Africa": { Power_distance: 49, Individualism: 23, Masculinity: 63, Uncertainty_avoidance: 49, Pragmatism: 18, Indulgence: 63 },
   "South Korea": { Power_distance: 60, Individualism: 18, Masculinity: 95, Uncertainty_avoidance: 85, Pragmatism: 88, Indulgence: 29 },
   "Spain": { Power_distance: 57, Individualism: 51, Masculinity: 42, Uncertainty_avoidance: 86, Pragmatism: 48, Indulgence: 44 },
@@ -167,7 +167,7 @@ let chart = new Chart(ctx, {
 function renderCountries(filter = "") {
   countryButtons.innerHTML = "";
   
-    // pokazuj przyciski tylko gdy pole wyszukiwania jest aktywne i niepuste
+    // show buttons only when a search field is active and unempty
   if (document.activeElement !== searchInput || !filter.trim()) {
     return;
   }
